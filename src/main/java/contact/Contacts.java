@@ -1,9 +1,3 @@
-/*
-Create a program that stores and manages a list of contacts.
-Each contact should have a name, phone number, and email address.
-The program should allow the user to add, delete, and search for contacts.
-This project will help you understand data structures such as linked lists and hash tables."*/
-
 package contact;
 
 import java.util.logging.Logger;
@@ -25,9 +19,6 @@ class LinkedList{
             next = null;
         }
     }
-    // LinkedList(){
-    //     head = null;
-    // }
     void insert(String contact,long phno,String email){
         Node n1 = new Node(contact,phno,email);
         Node temp = head;
@@ -49,7 +40,8 @@ class LinkedList{
             if(search.equals(temp.contact)){
 
                 set=1;
-                log.info("\nContact found.\nContact: "+temp.contact+"\nPhno: "+temp.phno+"\nEmail Address: "+temp.email+"\n");
+                String res = "\nContact found.\nContact: "+temp.contact+"\nPhno: "+temp.phno+"\nEmail Address: "+temp.email+"\n";
+                log.info(res);
             }
             temp = temp.next;
         }
